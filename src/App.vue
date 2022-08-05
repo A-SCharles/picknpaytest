@@ -1,11 +1,20 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/products">Products</router-link>
-  </nav>
-  <router-view/>
+  <div id="container-fluid">
+    <Navbar />
+    <Footer />
+  </div>
 </template>
+
+<script>
+import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
+export default {
+  components: {
+    Navbar,
+    Footer
+  },
+};
+</script>
 
 <style>
 #app {
@@ -16,8 +25,17 @@
   color: #2c3e50;
 }
 
+#container-fluid{
+    background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgb(255, 0, 0) 100%
+  );
+}
+
 nav {
-  padding: 30px;
+  padding: 30px;;
 }
 
 nav a {

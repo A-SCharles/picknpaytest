@@ -1,18 +1,19 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <div class="container-fluid"></div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-}
+
+};
 </script>
+
+<style scoped>
+.container-fluid {
+  height: 88.4vh;
+  background-image: url("https://previews.123rf.com/images/sunshineseeds/sunshineseeds2006/sunshineseeds200605267/149407994-johannesburg-south-africa-february-22-2017-entrance-to-local-pick-n-pay-supermarket-grocery-store.jpg");
+  background-repeat: no-repeat;
+  background-position: center;  
+  object-fit: cover;
+}
+</style>

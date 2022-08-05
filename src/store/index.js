@@ -16,12 +16,12 @@ export default createStore({
   },
   actions: {
     getProducts: async (context) => {
-      fetch("http://localhost:3000/products")
+      fetch("https://picknpay-apitest.herokuapp.com/products")
         .then((res) => res.json())
         .then((data) => context.commit("setproducts",data));
     },
     getProduct: async (context, id) => {
-      fetch("http://localhost:3000/products/"+ id)
+      fetch("https://picknpay-apitest.herokuapp.com/products/"+ id)
         .then((res) => res.json())
         .then((data) => context.commit("setproduct",data));
       },
