@@ -1,5 +1,8 @@
 <template>
     <h1>Hello I am products</h1>
+    <div v-if="user">
+    <h2>Welcome {{user.firstName}}</h2>
+    </div>
     <div v-if="products">
         <div v-for="product in products" :key="product">
             <div class="container">
@@ -24,8 +27,11 @@ export default {
     },
     computed: {
         products() {
-            console.log(this.$store.state.products)
+            // console.log(this.$store.state.products)
             return this.$store.state.products
+        },
+        user() {
+            return this.$store.state.user
         }
     }
 }
